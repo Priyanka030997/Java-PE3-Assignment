@@ -4,16 +4,14 @@ import java.io.*;
 import java.util.*;
 
 public class ConsecutiveNumbers {
-    public static void main(String args[])
+   public String Checkconsecutiveornot(String arr)
     {
-     Scanner sc=new Scanner(System.in);
-     String numbers=sc.next();
      //System.out.println(numbers);
-     String arr[]=numbers.split(",");
-     int arr2[]=new int[arr.length];
-     for(int i=0;i<arr.length;i++)
+     String numbers[]=arr.split(",");
+     int arr2[]=new int[numbers.length];
+     for(int i=0;i<numbers.length;i++)
      {
-         arr2[i]=Integer.parseInt(arr[i]);
+         arr2[i]=Integer.parseInt(numbers[i]);
      }
      int temp;
      for(int i=0;i<arr2.length;i++)
@@ -39,11 +37,11 @@ public class ConsecutiveNumbers {
      }
      if(flag==0)
      {
-             System.out.println(numbers+" are consecutive numbers");
+             return "consecutive numbers";
          }
      else
      {
-         System.out.println(numbers+" are not consecutive numbers");
+         return "Not consecutive numbers";
      }
 
      }
