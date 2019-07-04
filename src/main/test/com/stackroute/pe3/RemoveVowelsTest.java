@@ -17,8 +17,14 @@ public class RemoveVowelsTest {
     {
         String result=obj.RemoveVowelsinString("India,United States,Germany,Egypt,czechoslovakia");
 
-        assertEquals("nd,ntd Stts,Grmny,gypt,czchslvk",result);
+        assertEquals("Ind,Untd Stts,Grmny,Egypt,czchslvk",result);
     }
+    @Test
+    public void VowelsnotinString()
+    {
+        String result=obj.RemoveVowelsinString("bcdfg,tyvj");
 
+        assertEquals("bcdfg,tyvj",result);
+    }
 
 }

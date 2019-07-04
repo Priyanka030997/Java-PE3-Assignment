@@ -14,19 +14,22 @@ public class ConsecutiveNumbersTest{
     @Test
     public void Givenseriesisconsecutive()
     {
-        String result=obj.Checkconsecutiveornot("54,53,52,51,50,49,48");
+        int arr[]={54,53,52,51,50,49,48};
+        String result=obj.Checkconsecutiveornot(arr);
         assertEquals("consecutive numbers",result);
     }
     @Test
     public void Givenseriesisnotconsecutive()
     {
-        String result=obj.Checkconsecutiveornot("98,96,95,94,93");
+        int arr[]={98,96,95,94,93};
+        String result=obj.Checkconsecutiveornot(arr);
         assertEquals("Not consecutive numbers",result);
     }
     @Test
     public void Givenseriesisrepeatednumber()
     {
-        String result=obj.Checkconsecutiveornot("1,2,3,4,5,6,6");
+        int arr[]={1,2,3,4,5,6,6};
+        String result=obj.Checkconsecutiveornot(arr);
         assertEquals("Not consecutive numbers",result);
     }
 
